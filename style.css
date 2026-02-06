@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --bg-color:#1f242d;  /*Main background color */
+    --second-bg-color:#323946;  /*Section / card background*/
+    --text-color:#fff;  /*Normal text color*/
+    --main-color:#0ef;  /*Highlight / button / hover color*/
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden; /*close Horizontal scroll*/
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position: fixed;    /* Fixes the navbar at the top of the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;     /* Pushes logo left and nav links right */
+    align-items: center;    /* Vertically centers navbar items */
+    z-index: 100;           /* Keeps the navbar above all other page content when elements overlap */
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;      /* space between menu items */
+}
