@@ -45,23 +45,42 @@ section{
 }
 
 .logo{
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
 }
 
 .navbar a{
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     color: var(--text-color);
     margin-left: 4rem;      /* space between menu items */
     transform: .3s;
+    position: relative;      /* underline mate */
+    transition: color .3s ease;
 }
 
 .navbar a:hover,
 .navbar a.active{
     color: var(--main-color);
 }
+
+.navbar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;             /* text ni niche gap */
+    width: 0%;
+    height: 3px;
+    background: var(--main-color);
+    transition: width .3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after{
+    width: 100%;
+}
+
 
 #menu-icon{
     font-size: 3.6rem;
@@ -77,13 +96,6 @@ section{
 }
 
 .home-image img{
-    /* width: 35vw; */
-    /* height: 35vw;          for perfect circle */
-    /* border-radius: 50%; */
-    /* object-fit: cover;    image stretch na thay */
-    /* transition: transform .5s ease;  hover animation smooth */
-
-    
     width: 52vw;          
     height: 52vw;         
     max-width: 600px;     
@@ -92,23 +104,35 @@ section{
     border-radius: 50%;
     object-fit: cover;
 
-    animation: floatImage 4s ease-in-out infinite;
+    border: 5px solid var(--main-color);   /*BORDER */
+    padding: 8px;                          /* border ane photo vachhe gap */
+    background: var(--bg-color);           /* gap ma bg color */
 
+    animation: floatImage 4s ease-in-out infinite;
+    transition: border-color .4s ease, box-shadow .4s ease;
 }
 
 
+/* floating animatin */
 
-/* @keyframes floatImage{
+@keyframes floatImage{
     0%{
         transform: translateY(0);
     }
     50%{
-        transform: translateY(-15px);
+        transform: translateY(-20px);
     }
     100%{
         transform: translateY(0);
     }
-} */
+}
+
+/* border glow effect on hover */
+
+.home-image img:hover{
+    box-shadow: 0 0 3rem var(--main-color);
+    border-color: #fff;
+}
 
 
 
@@ -172,3 +196,49 @@ span{
 .btn:hover{
     box-shadow: none;
 }
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    background: var(--second-bg-color);
+}
+
+.about-img img{
+    width:35vw;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0  3rem ;
+}
+
+.about-img img{
+    width: 45vw;
+    height: 45vw;
+    max-width: 600px;
+    max-height: 600px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 5px solid var(--main-color);
+    padding: 8px;
+    background: var(--second-bg-color);
+}
+
