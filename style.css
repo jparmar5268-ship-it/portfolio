@@ -98,7 +98,7 @@ section{
 .home-image img{
     width: 52vw;          
     height: 52vw;         
-    max-width: 600px;     
+    max-width: 600px;     /*img 600px kata moti ni thay*/
     max-height: 600px;
 
     border-radius: 50%;
@@ -108,7 +108,7 @@ section{
     padding: 8px;                          /* border ane photo vachhe gap */
     background: var(--bg-color);           /* gap ma bg color */
 
-    animation: floatImage 4s ease-in-out infinite;
+    animation: floatImage 4s ease-in-out infinite;  /*ani_name,timming,movement motion,endless repeat*/
     transition: border-color .4s ease, box-shadow .4s ease;
 }
 
@@ -242,3 +242,14 @@ span{
     background: var(--second-bg-color);
 }
 
+.services h2{
+    margin-bottom: 5rem;
+}
+
+.services-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
