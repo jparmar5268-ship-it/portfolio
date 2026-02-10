@@ -253,3 +253,65 @@ span{
     flex-wrap: wrap;
     gap: 2rem;
 }
+/* services section */
+
+.services{
+    background-color: var(--bg-color);  /*section color*/
+}
+
+/* grid container */
+
+.grid-container{
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-columns: repeat(3,1fr); 
+    grid-template-rows: repeat(3,auto);  */
+    /* gap: 4rem; */
+    row-gap: 5rem;
+    column-gap: 5rem;
+}
+
+.services-grid:hover{
+    transform: translateY(-10px);
+    transition: transform 0.3 ease;
+}
+
+/* card */
+
+.services-grid{
+    background-color: var(--second-bg-color);   /*colour of card*/
+    padding: 4rem 3rem;
+    /* margin-left: 6rem; */
+    border-radius: 2rem;
+    text-align: center;
+    /* width: 20vw; */
+    /* height: 15vw; */
+    /* margin-left: 6rem; */
+    min-height: 320px;  /*same height of all boxes*/
+    border: 5px solid var(--main-color);
+    transform: transform.4s ease;
+}
+
+/* icon */
+
+.services-grid i{
+    font-size: 6rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+/* title */
+
+.services-grid h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* text */
+
+.services-grid p{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
